@@ -18,7 +18,7 @@
         $url.= "&fa=0&d=0";
         $palabras = file_get_contents($url);
         $r = explode("\n",$palabras);
-        $palabras = $r[223];
+        $palabras = $r[247];
         $td = "<td>";
         $td2 = "</td>";
         $ini = strpos($palabras, $td);
