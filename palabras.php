@@ -1,12 +1,12 @@
 <?php
-        $letrasEmpieza = "ar";
+        $letrasEmpieza = "a";
         $letrasTermina = "";
         $palabrasQueTenganLetras = "";
         $palabrasQueNoTenganLetras = "";
         $palabrasQueTenganLaCadena = "";
         $palabrasQueNoTenganLaCadena = "";
         $numeroDeSilabas = 0;
-        $numeroDeLetras = 0;
+        $numeroDeLetras = 5;
         $url = "http://www.palabrasque.com/buscador.php?i=".$letrasEmpieza;
         $url.= "&f=".$letrasTermina."&tv=0";
         $url.= "&button=Buscar+palabras&ms=".$palabrasQueTenganLetras;
