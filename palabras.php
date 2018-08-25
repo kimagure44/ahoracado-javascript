@@ -6,7 +6,7 @@
         $palabrasQueTenganLaCadena = "";
         $palabrasQueNoTenganLaCadena = "";
         $numeroDeSilabas = 0;
-        $numeroDeLetras = 5;
+        $numeroDeLetras = 6;
         $url = "http://www.palabrasque.com/buscador.php?i=".$letrasEmpieza;
         $url.= "&f=".$letrasTermina."&tv=0";
         $url.= "&button=Buscar+palabras&ms=".$palabrasQueTenganLetras;
@@ -16,9 +16,10 @@
         $url.= "&fs=".$numeroDeSilabas;
         $url.= "&fnl=".$numeroDeLetras;
         $url.= "&fa=0&d=0";
+        
         $palabras = file_get_contents($url);
-        $r = explode("\n",$palabras);
-        $palabras = $r[247];
+        $r = explode("<hr>",$palabras);
+        $palabras = $r[1];
         $td = "<td>";
         $td2 = "</td>";
         $ini = strpos($palabras, $td);
